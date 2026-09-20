@@ -1,0 +1,56 @@
+ <!-- Quick actions -->
+          <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft sm:p-6">
+            <div>
+              <h3 class="text-base font-semibold text-slate-950">Quick actions</h3>
+              <p class="mt-1 text-sm text-slate-500">Jump into common tasks.</p>
+            </div>
+
+            <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              <a href="#" class="group flex items-center gap-3 rounded-2xl border border-slate-200 p-4 transition hover:border-slate-300 hover:bg-slate-50">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-700 transition group-hover:bg-slate-900 group-hover:text-white">
+                  <i data-lucide="user-plus" class="h-5 w-5"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-semibold text-slate-900">Add customer</p>
+                  <p class="mt-0.5 text-xs text-slate-500">Create a new customer profile</p>
+                </div>
+                <i data-lucide="arrow-up-right" class="h-4 w-4 text-slate-400"></i>
+              </a>
+
+              <a href="#" class="group flex items-center gap-3 rounded-2xl border border-slate-200 p-4 transition hover:border-slate-300 hover:bg-slate-50">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-700 transition group-hover:bg-slate-900 group-hover:text-white">
+                  <i data-lucide="package-plus" class="h-5 w-5"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-semibold text-slate-900">Add product</p>
+                  <p class="mt-0.5 text-xs text-slate-500">Publish a new product</p>
+                </div>
+                <i data-lucide="arrow-up-right" class="h-4 w-4 text-slate-400"></i>
+              </a>
+
+              <a href="#" class="group flex items-center gap-3 rounded-2xl border border-slate-200 p-4 transition hover:border-slate-300 hover:bg-slate-50">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-700 transition group-hover:bg-slate-900 group-hover:text-white">
+                  <i data-lucide="file-bar-chart-2" class="h-5 w-5"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-semibold text-slate-900">Create report</p>
+                  <p class="mt-0.5 text-xs text-slate-500">Generate a custom report</p>
+                </div>
+                <i data-lucide="arrow-up-right" class="h-4 w-4 text-slate-400"></i>
+              </a>
+            </div>
+
+            <div class="mt-5 rounded-2xl bg-slate-50 p-4">
+              <div class="flex items-start gap-3">
+                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-slate-700 shadow-sm">
+                  <i data-lucide="lightbulb" class="h-4 w-4"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">Tip of the day</p>
+                  <p class="mt-1 text-xs leading-5 text-slate-500">
+                    Compare this week's conversion rate against your monthly average to spot shifts earlier.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>

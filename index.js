@@ -80,7 +80,7 @@ app.use((req, res, next) => {
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "xian");
-const partialsDir = path.join(__dirname, "views/partials");
+const partialsDir = path.join(__dirname, "views/partials/");
 fs.readdir(partialsDir, (err, files) => {
   if (err) {
     console.error("❌ Could not read partials directory:", err);

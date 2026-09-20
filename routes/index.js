@@ -28,7 +28,7 @@ import express from "express";
 import { homePage } from "../controllers/homeController.js";
 const router = express.Router();
 router.get("/", homePage);
-
+import { dashboardController } from "../controllers/dashboardController.js";
 import { loginPage, registerPage, forgotPasswordPage, dashboardPage, loginUser, registerUser, logoutUser } from "../controllers/authController.js";
 
 router.get("/login", loginPage);
@@ -39,4 +39,5 @@ router.get("/forgot-password", forgotPasswordPage);
 router.get("/dashboard", dashboardPage);
 router.get("/logout", logoutUser);
 
+router.get("/dashboard2", dashboardController.index)
 export default router;

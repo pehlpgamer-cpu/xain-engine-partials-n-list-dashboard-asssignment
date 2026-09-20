@@ -1,0 +1,38 @@
+<!-- Activity -->
+          <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft sm:p-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-base font-semibold text-slate-950">Recent activity</h3>
+                <p class="mt-1 text-sm text-slate-500">Latest actions across your workspace.</p>
+              </div>
+              <button class="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-900" aria-label="Activity options">
+                <i data-lucide="ellipsis-vertical" class="h-5 w-5"></i>
+              </button>
+            </div>
+
+            <!-- Handlebars template: recent activity -->
+            
+              {{#each recentActivity}}
+                <div class="flex gap-3 py-4 first:pt-0">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full {{this.iconBg}} {{this.iconColor}}">
+                    <i data-lucide="{{this.icon}}" class="h-4 w-4"></i>
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <p class="text-sm font-medium text-slate-900">{{this.title}}</p>
+                    <p class="mt-1 text-xs text-slate-500">{{this.description}}</p>
+                    <p class="mt-2 text-[11px] font-medium text-slate-400">{{this.time}}</p>
+                  </div>
+                </div>
+              {{/each}}
+            
+
+            <div id="recentActivityList" class="mt-6 divide-y divide-slate-100"></div>
+
+            <button
+              type="button"
+              class="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 px-3 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+            >
+              View all activity
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </article>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern responsive dashboard built with HTML, Tailwind CSS CDN, and Lucide Icons CDN." />
+  <title>Modern Dashboard</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(15, 23, 42, 0.06)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Handlebars + Lucide Icons CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.8/dist/handlebars.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen bg-slate-50 font-sans text-slate-900">
+  <!-- Mobile overlay -->
+  <div
+    id="sidebarOverlay"
+    class="fixed inset-0 z-40 hidden bg-slate-950/50 backdrop-blur-sm lg:hidden"
+    aria-hidden="true"
+  ></div>
+
+  <div class="min-h-screen lg:flex">
+    {{> sidebar}}
+
+    <!-- Main -->
+    <div class="min-w-0 flex-1">
+      {{> topbar}}
+
+      <main class="mx-auto max-w-[1600px] p-4 sm:p-6 lg:p-8">
+        {{> page_heading}}
+
+        {{> kpi_cards}}
+
+        <!-- Main grid -->
+        <section class="mt-6 grid gap-6 xl:grid-cols-[minmax(0,1.65fr)_minmax(340px,0.95fr)]">
+          {{> revenue_chart}}
+
+          {{> recent_activity}}
+        </section>
+
+        <!-- Bottom section -->
+        <section class="mt-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+          {{> top_products}}
+
+         {{> quick_actions}}
+        </section>
+
+        <footer class="py-8 text-center text-xs text-slate-400">
+          © 2026 Northstar. Built with HTML, Tailwind CSS, and Lucide.
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
